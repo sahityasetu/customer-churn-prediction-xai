@@ -1,0 +1,65 @@
+{
+  "dataset": {
+    "rows": 7043,
+    "churn_rate": 0.2654,
+    "test_rows": 1409
+  },
+  "assumptions": {
+    "offer_cost": 50.0,
+    "save_rate": 0.3,
+    "value_months": 12
+  },
+  "models": {
+    "Logistic Regression": {
+      "cv_roc_auc": 0.8468,
+      "cv_profit_usd": 221616,
+      "threshold": 0.45,
+      "test": {
+        "roc_auc": 0.8452,
+        "pr_auc": 0.6525,
+        "precision": 0.4905,
+        "recall": 0.8262,
+        "f1": 0.6155
+      },
+      "test_profit_usd": 51853
+    },
+    "Random Forest": {
+      "cv_roc_auc": 0.8448,
+      "cv_profit_usd": 218987,
+      "threshold": 0.34,
+      "test": {
+        "roc_auc": 0.841,
+        "pr_auc": 0.652,
+        "precision": 0.4523,
+        "recall": 0.8743,
+        "f1": 0.5962
+      },
+      "test_profit_usd": 51925
+    },
+    "XGBoost": {
+      "cv_roc_auc": 0.8458,
+      "cv_profit_usd": 219999,
+      "threshold": 0.34,
+      "test": {
+        "roc_auc": 0.8445,
+        "pr_auc": 0.6609,
+        "precision": 0.4636,
+        "recall": 0.885,
+        "f1": 0.6085
+      },
+      "test_profit_usd": 53106
+    }
+  },
+  "selected_model": "Logistic Regression",
+  "baselines_test_profit_usd": {
+    "contact_nobody": 0,
+    "contact_everyone": 27524,
+    "contact_all_month_to_month": 45296,
+    "model_targeting": 51853
+  },
+  "churner_capture": {
+    "top_10pct": 0.2807,
+    "top_20pct": 0.4973,
+    "top_30pct": 0.6524
+  }
+}
